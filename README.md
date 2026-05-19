@@ -6,7 +6,6 @@
 ## 📖 Sobre o Projeto
 O **CiberMind** é uma EdTech de impacto social que atua na interseção entre comunicação comunitária, educação de base e direitos digitais. Nossa missão é traduzir a complexidade da cibersegurança em ferramentas de proteção acessíveis para crianças, mulheres e microempreendedores de periferia.
 
-* **Território Base:** Rio das Pedras, Rio de Janeiro.
 * **Propósito:** Combater a exclusão digital e o racismo algorítmico através do letramento.
 
 ---
@@ -15,7 +14,7 @@ O **CiberMind** é uma EdTech de impacto social que atua na interseção entre c
 
 | Público-Alvo | Foco da Solução |
 | :--- | :--- |
-| **Crianças & Mulheres** | Letramento lúdico, prevenção de violência online e redes de apoio. |
+| **Crianças & Mulheres** | Letramento digital, prevenção de violência online e redes de apoio. |
 | **MEIs** | Blindagem contra fraudes financeiras e segurança no WhatsApp Business. |
 | **PMEs** | Governança de dados e resiliência contra ataques de engenharia social. |
 
@@ -33,11 +32,7 @@ projetos:
   - nome: "Plataforma Gamificada"
     tipo: "EdTech"
     status: "Em Desenvolvimento (2026)"
-    funcao: "Educação em cibersegurança sem jargões técnicos."
-
-  - nome: "Mídia Independente"
-    tipo: "Conteúdo Educativo"
-    foco: "Utilidade pública e proteção territorial."
+    funcao: "Educação em cibersegurança acessível."
 
 # Run and deploy your AI Studio app
 
