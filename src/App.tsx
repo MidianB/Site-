@@ -84,15 +84,6 @@ export default function App() {
             <NavLink href="#contato">Contato</NavLink>
           </nav>
 
-          <div className="hidden md:block">
-            <a 
-              href="#contato"
-              className="px-5 py-2.5 rounded-full bg-dark text-white text-sm font-medium hover:bg-petrol transition-colors inline-block"
-            >
-              Fale Conosco
-            </a>
-          </div>
-
           {/* Mobile Menu Toggle */}
           <button 
             className="md:hidden p-2 text-dark"
@@ -119,15 +110,6 @@ export default function App() {
               <NavLink href="#produtos" onClick={() => setMobileMenuOpen(false)}>Produtos</NavLink>
               <NavLink href="#contato" onClick={() => setMobileMenuOpen(false)}>Contato</NavLink>
             </nav>
-            <div className="mt-12">
-               <a 
-                href="#contato"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center px-6 py-4 rounded-full bg-petrol text-white font-medium block"
-              >
-                Fale Conosco
-              </a>
-            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -151,22 +133,6 @@ export default function App() {
                 <p className="text-lg md:text-xl text-graphite-light font-light max-w-xl leading-relaxed mb-10">
                   O Ciber Mind democratiza o acesso à cibersegurança, inteligência artificial e educação digital para mulheres, crianças, adolescentes e pequenos empreendedores em situação de vulnerabilidade social.
                 </p>
-                
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a 
-                    href="#produtos" 
-                    className="px-8 py-4 rounded-full bg-petrol text-white font-medium hover:bg-dark transition-all flex items-center justify-center gap-2 group"
-                  >
-                    Conheça o projeto
-                    <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </a>
-                  <a 
-                    href="#sobre" 
-                    className="px-8 py-4 rounded-full border border-black/10 text-dark font-medium hover:bg-black/5 transition-colors flex items-center justify-center"
-                  >
-                    Fale conosco
-                  </a>
-                </div>
               </motion.div>
             </div>
 
@@ -289,6 +255,47 @@ export default function App() {
           </div>
         </section>
 
+        {/* Programas e Parcerias */}
+        <section className="py-20 bg-offwhite border-b border-black/5 overflow-hidden flex flex-col justify-center">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-12 text-center">
+            <h3 className="font-display font-medium text-sm text-graphite uppercase tracking-wider">
+              Programas que participei e parcerias
+            </h3>
+          </div>
+          
+          <div className="relative w-full flex overflow-hidden group">
+            {/* Fade overlays */}
+            <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-offwhite to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-offwhite to-transparent z-10 pointer-events-none"></div>
+            
+            {/* Marquee Container */}
+            <div className="flex shrink-0 animate-marquee gap-6 md:gap-8 items-center w-max pr-6 md:pr-8 hover:[animation-play-state:paused]">
+              {[...Array(2)].map((_, i) => (
+                <React.Fragment key={i}>
+                  <div className="flex shrink-0 items-center justify-center w-56 md:w-64 h-28 md:h-32 bg-white rounded-xl shadow-md border border-black/5 px-6">
+                    <span className="font-display font-medium text-base md:text-lg text-dark text-center leading-snug">Sebrae Afro</span>
+                  </div>
+                  <div className="flex shrink-0 items-center justify-center w-56 md:w-64 h-28 md:h-32 bg-white rounded-xl shadow-md border border-black/5 px-6">
+                    <span className="font-display font-medium text-base md:text-lg text-dark text-center leading-snug">Shell Iniciativa Jovem</span>
+                  </div>
+                  <div className="flex shrink-0 items-center justify-center w-56 md:w-64 h-28 md:h-32 bg-white rounded-xl shadow-md border border-black/5 px-6">
+                    <span className="font-display font-medium text-sm md:text-base text-dark text-center leading-snug">AWE (Academia de<br/>Empreendedoras - EUA)</span>
+                  </div>
+                  <div className="flex shrink-0 items-center justify-center w-56 md:w-64 h-28 md:h-32 bg-white rounded-xl shadow-md border border-black/5 px-6">
+                    <span className="font-display font-medium text-base md:text-lg text-dark text-center leading-snug">RME Acelera</span>
+                  </div>
+                  <div className="flex shrink-0 items-center justify-center w-56 md:w-64 h-28 md:h-32 bg-white rounded-xl shadow-md border border-black/5 px-6">
+                    <span className="font-display font-medium text-base md:text-lg text-dark text-center leading-snug">Capital Empreendedor</span>
+                  </div>
+                  <div className="flex shrink-0 items-center justify-center w-56 md:w-64 h-28 md:h-32 bg-white rounded-xl shadow-md border border-black/5 px-6">
+                    <span className="font-display font-medium text-base md:text-lg text-dark text-center leading-snug">Ginga Prototipa</span>
+                  </div>
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Sobre (#sobre) */}
         <section id="sobre" className="pt-32">
           {/* 1. Quem Somos */}
@@ -304,7 +311,7 @@ export default function App() {
                     viewport={{ once: true }}
                     className="text-4xl md:text-6xl font-display font-medium leading-tight mb-8"
                   >
-                    O Ciber Mind é uma edtech e iniciativa de impacto social.
+                    O Ciber Mind é uma edtech.
                   </motion.h2>
                   <p className="text-xl text-white/70 font-light mb-8 max-w-2xl">
                     Focada em cibersegurança, inteligência artificial, proteção digital e inclusão tecnológica.
@@ -406,7 +413,7 @@ export default function App() {
                   </div>
                   <h3 className="font-display text-2xl font-semibold text-dark mb-4">Valores</h3>
                   <p className="text-graphite/80 font-light">
-                    Inclusão, Inovação,<br/> Acessibilidade, Diversidade,<br/> Educação e Impacto Social.
+                    Inclusão, Inovação,<br/> Acessibilidade, Diversidade,<br/> Educação.
                   </p>
                 </motion.div>
 
@@ -449,53 +456,6 @@ export default function App() {
                  <ShieldCheck className="w-8 h-8 text-dark" />
                  <h4 className="font-display text-xl font-medium text-dark">Proteção Digital Prática</h4>
                </div>
-            </div>
-          </div>
-
-          {/* 5. Linha do Tempo */}
-          <div className="max-w-4xl mx-auto px-6 lg:px-8 mb-32">
-            <div className="text-center mb-20 flex flex-col items-center">
-              <span className="text-petrol font-semibold uppercase tracking-wider text-sm mb-4 block">Nossa Trajetória</span>
-              <SectionHeading 
-                title="A jornada do Ciber Mind" 
-                subtitle="Passos construídos ao lado da comunidade e de parceiros estratégicos." 
-              />
-            </div>
-
-            <div className="relative border-l-2 border-black/5 ml-4 md:ml-10 space-y-16">
-              
-              <div className="relative pl-10">
-                <div className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-petrol flex items-center justify-center shadow-[0_0_0_6px_var(--color-offwhite)]">
-                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                </div>
-                <h4 className="font-display text-2xl font-semibold text-dark mb-2">Criação do Projeto</h4>
-                <p className="text-graphite/70 font-light">O início de uma ideia: traduzir tecnologia e proteger pessoas comuns por meio da informação.</p>
-              </div>
-
-              <div className="relative pl-10">
-                <div className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-purple-subtle flex items-center justify-center shadow-[0_0_0_6px_var(--color-offwhite)]">
-                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                </div>
-                <h4 className="font-display text-2xl font-semibold text-dark mb-2">Participação em Programas</h4>
-                <p className="text-graphite/70 font-light">Validação das metodologias e primeiros reconhecimentos institucionais focados em impacto.</p>
-              </div>
-
-              <div className="relative pl-10">
-                <div className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-dark flex items-center justify-center shadow-[0_0_0_6px_var(--color-offwhite)]">
-                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                </div>
-                <h4 className="font-display text-2xl font-semibold text-dark mb-2">Palestras e Workshops</h4>
-                <p className="text-graphite/70 font-light">Milhares de pessoas impactadas presencialmente e online com atividades práticas de cibersegurança.</p>
-              </div>
-
-              <div className="relative pl-10">
-                <div className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-petrol flex items-center justify-center shadow-[0_0_0_6px_var(--color-offwhite)]">
-                   <div className="w-2 h-2 rounded-full bg-white"></div>
-                </div>
-                <h4 className="font-display text-2xl font-semibold text-dark mb-2">Crescimento da Comunidade</h4>
-                <p className="text-graphite/70 font-light">Uma rede cada vez mais forte de mulheres, educadores e empreendedores conscientes e multiplicadores.</p>
-              </div>
-
             </div>
           </div>
         </section>
@@ -610,22 +570,17 @@ export default function App() {
             
             <div className="grid lg:grid-cols-3 gap-8">
               
-              {/* Cartão 1: Impacto Social */}
-              <div className="bg-white rounded-[2rem] p-8 lg:p-10 border-2 border-petrol/30 shadow-xl relative flex flex-col h-full transform lg:-translate-y-4">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                  <span className="bg-petrol text-white text-xs font-bold uppercase tracking-wider py-1.5 px-4 rounded-full">
-                    Impacto Social
-                  </span>
-                </div>
+              {/* Cartão 1: Crianças e Mulheres */}
+              <div className="bg-white rounded-[2rem] p-8 lg:p-10 border border-petrol/30 shadow-xl relative flex flex-col h-full transform lg:-translate-y-4">
                 <div className="mb-8 mt-2">
                   <h3 className="font-display text-2xl font-semibold text-dark mb-2">Crianças e Mulheres</h3>
-                  <p className="text-graphite/60 text-sm font-medium uppercase tracking-wider mb-6">Foco Comunitário</p>
                   <p className="text-graphite font-light mb-6 min-h-[48px]">
                     <span className="font-medium">Público:</span> Crianças, jovens e mulheres em situação de vulnerabilidade.
                   </p>
                   <div className="flex items-baseline gap-2 pb-8 border-b border-black/10">
-                    <span className="text-4xl font-display font-medium text-petrol">Acesso Gratuito</span>
-                    <span className="text-sm font-medium text-graphite/60 align-bottom">/ Preço Social</span>
+                    <span className="text-lg font-medium text-graphite/60 align-top">R$</span>
+                    <span className="text-5xl font-display font-medium text-dark">19,90</span>
+                    <span className="text-sm font-medium text-graphite/60 align-bottom">/ mês</span>
                   </div>
                 </div>
                 <div className="flex-1 space-y-4">
