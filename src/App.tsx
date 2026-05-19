@@ -49,6 +49,7 @@ function SectionHeading({ title, subtitle }: { title: string; subtitle: string }
 export default function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [formStatus, setFormStatus] = useState<"idle" | "success">("idle");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -666,50 +667,71 @@ export default function App() {
               {/* Formulário Minimalista */}
               <div className="bg-white p-8 md:p-10 rounded-[2.5rem] text-dark shadow-2xl relative">
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-purple-subtle/20 rounded-full blur-[40px] z-0"></div>
-                <form className="space-y-6 relative z-10" onSubmit={(e) => e.preventDefault()}>
-                  <h3 className="font-display text-2xl font-semibold mb-6">Envie uma mensagem</h3>
-                  
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-dark/70">Nome</label>
-                    <input 
-                      type="text" 
-                      placeholder="Seu nome completo"
-                      className="w-full px-4 py-4 rounded-xl bg-offwhite border border-black/5 focus:border-petrol focus:ring-1 focus:ring-petrol outline-none transition-all placeholder:text-graphite/40"
-                    />
+                
+                {formStatus === "success" ? (
+                  <div className="relative z-10 flex flex-col items-center justify-center text-center py-12">
+                    <div className="w-16 h-16 bg-petrol/10 text-petrol rounded-full flex items-center justify-center mb-6">
+                      <CheckCircle2 className="w-8 h-8" />
+                    </div>
+                    <h3 className="font-display text-2xl font-semibold mb-2">Mensagem enviada com sucesso!</h3>
+                    <p className="text-graphite/70">Em breve entraremos em contato.</p>
+                    <button 
+                      onClick={() => setFormStatus("idle")}
+                      className="mt-8 px-6 py-3 rounded-full bg-offwhite border border-black/5 hover:bg-black/5 transition-colors font-medium text-sm"
+                    >
+                      Enviar nova mensagem
+                    </button>
                   </div>
-                  
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-dark/70">E-mail</label>
-                    <input 
-                      type="email" 
-                      placeholder="seu@email.com"
-                      className="w-full px-4 py-4 rounded-xl bg-offwhite border border-black/5 focus:border-petrol focus:ring-1 focus:ring-petrol outline-none transition-all placeholder:text-graphite/40"
-                    />
-                  </div>
+                ) : (
+                  <form className="space-y-6 relative z-10" onSubmit={(e) => { e.preventDefault(); setFormStatus("success"); }}>
+                    <h3 className="font-display text-2xl font-semibold mb-6">Envie uma mensagem</h3>
+                    
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium text-dark/70">Nome</label>
+                      <input 
+                        type="text" 
+                        required
+                        placeholder="Seu nome completo"
+                        className="w-full px-4 py-4 rounded-xl bg-offwhite border border-black/5 focus:border-petrol focus:ring-1 focus:ring-petrol outline-none transition-all placeholder:text-graphite/40"
+                      />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium text-dark/70">E-mail</label>
+                      <input 
+                        type="email" 
+                        required
+                        placeholder="seu@email.com"
+                        className="w-full px-4 py-4 rounded-xl bg-offwhite border border-black/5 focus:border-petrol focus:ring-1 focus:ring-petrol outline-none transition-all placeholder:text-graphite/40"
+                      />
+                    </div>
 
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-dark/70">Instituição</label>
-                    <input 
-                      type="text" 
-                      placeholder="Nome da empresa, ONG ou escola"
-                      className="w-full px-4 py-4 rounded-xl bg-offwhite border border-black/5 focus:border-petrol focus:ring-1 focus:ring-petrol outline-none transition-all placeholder:text-graphite/40"
-                    />
-                  </div>
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium text-dark/70">Instituição</label>
+                      <input 
+                        type="text" 
+                        required
+                        placeholder="Nome da empresa, ONG ou escola"
+                        className="w-full px-4 py-4 rounded-xl bg-offwhite border border-black/5 focus:border-petrol focus:ring-1 focus:ring-petrol outline-none transition-all placeholder:text-graphite/40"
+                      />
+                    </div>
 
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-dark/70">Mensagem</label>
-                    <textarea 
-                      rows={4}
-                      placeholder="Como podemos colaborar?"
-                      className="w-full px-4 py-4 rounded-xl bg-offwhite border border-black/5 focus:border-petrol focus:ring-1 focus:ring-petrol outline-none transition-all placeholder:text-graphite/40 resize-none"
-                    ></textarea>
-                  </div>
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium text-dark/70">Mensagem</label>
+                      <textarea 
+                        rows={4}
+                        required
+                        placeholder="Como podemos colaborar?"
+                        className="w-full px-4 py-4 rounded-xl bg-offwhite border border-black/5 focus:border-petrol focus:ring-1 focus:ring-petrol outline-none transition-all placeholder:text-graphite/40 resize-none"
+                      ></textarea>
+                    </div>
 
-                  <button className="w-full py-4 rounded-xl bg-petrol text-white font-medium hover:bg-dark transition-all flex items-center justify-center gap-2 group mt-2">
-                    Enviar Mensagem
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </button>
-                </form>
+                    <button type="submit" className="w-full py-4 rounded-xl bg-petrol text-white font-medium hover:bg-dark transition-all flex items-center justify-center gap-2 group mt-2">
+                      Enviar Mensagem
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </form>
+                )}
               </div>
 
             </div>
