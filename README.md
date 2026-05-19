@@ -35,10 +35,6 @@ projetos:
     status: "Em Desenvolvimento (2026)"
     funcao: "Educação em cibersegurança sem jargões técnicos."
 
-  - nome: "Mídia Independente"
-    tipo: "Conteúdo Educativo"
-    foco: "Utilidade pública e proteção territorial."
-
 # Run and deploy your AI Studio app
 
 This contains everything you need to run your app locally.
