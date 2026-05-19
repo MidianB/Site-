@@ -1,6 +1,43 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# CiberMind 🛡️
+> Democratizando a segurança digital para territórios invisibilizados.
+
+---
+
+## 📖 Sobre o Projeto
+O **CiberMind** é uma EdTech de impacto social que atua na interseção entre comunicação comunitária, educação de base e direitos digitais. Nossa missão é traduzir a complexidade da cibersegurança em ferramentas de proteção acessíveis para crianças, mulheres e microempreendedores de periferia.
+
+* **Território Base:** Rio das Pedras, Rio de Janeiro.
+* **Propósito:** Combater a exclusão digital e o racismo algorítmico através do letramento.
+
+---
+
+## 🎯 Frentes de Atuação
+
+| Público-Alvo | Foco da Solução |
+| :--- | :--- |
+| **Crianças & Mulheres** | Letramento lúdico, prevenção de violência online e redes de apoio. |
+| **MEIs** | Blindagem contra fraudes financeiras e segurança no WhatsApp Business. |
+| **PMEs** | Governança de dados e resiliência contra ataques de engenharia social. |
+
+---
+
+## 🛠️ Ecossistema Tecnológico
+
+```yaml
+projetos:
+  - nome: "Bot Mary"
+    tipo: "Assistente Virtual"
+    plataforma: "WhatsApp API"
+    funcao: "Rede de emergência e salvaguarda para mulheres."
+
+  - nome: "Plataforma Gamificada"
+    tipo: "EdTech"
+    status: "Em Desenvolvimento (2026)"
+    funcao: "Educação em cibersegurança sem jargões técnicos."
+
+  - nome: "Mídia Independente"
+    tipo: "Conteúdo Educativo"
+    foco: "Utilidade pública e proteção territorial."
 
 # Run and deploy your AI Studio app
 
