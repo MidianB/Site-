@@ -1,0 +1,6 @@
+{
+  "name": "Ciber Mind",
+  "description": "Democratizando o acesso à educação em cibersegurança e proteção digital para grupos minoritizados e empreendedores. Um Brasil mais seguro digitalmente.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

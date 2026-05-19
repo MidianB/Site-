@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#48E5C2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#112330;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <circle cx="200" cy="200" r="180" fill="#112330" />
+  
+  <!-- Brain / Shield hybrid shape -->
+  <!-- Left hemisphere/shield half -->
+  <path d="M 200 60 C 130 60, 80 110, 80 170 C 80 230, 140 280, 200 340" fill="none" stroke="url(#grad1)" stroke-width="24" stroke-linecap="round"/>
+  <!-- Right hemisphere/shield half -->
+  <path d="M 200 60 C 270 60, 320 110, 320 170 C 320 230, 260 280, 200 340" fill="none" stroke="url(#grad1)" stroke-width="24" stroke-linecap="round"/>
+  
+  <!-- Circuit nodes -->
+  <circle cx="140" cy="120" r="16" fill="#48E5C2" />
+  <circle cx="260" cy="120" r="16" fill="#48E5C2" />
+  <circle cx="110" cy="200" r="16" fill="#48E5C2" />
+  <circle cx="290" cy="200" r="16" fill="#48E5C2" />
+  
+  <!-- Center eye/brain core -->
+  <circle cx="200" cy="170" r="30" fill="#48E5C2" />
+</svg>
