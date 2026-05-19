@@ -601,6 +601,126 @@ export default function App() {
           </div>
         </section>
 
+        {/* Soluções e Preços */}
+        <section id="precos" className="py-32 bg-offwhite">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="text-center mb-20 flex flex-col items-center">
+              <h1 className="text-4xl md:text-5xl font-display font-medium leading-tight text-dark mb-6 max-w-4xl">
+                Soluções de segurança sob medida para cada realidade
+              </h1>
+              <h2 className="text-xl text-graphite/80 font-light max-w-3xl">
+                Do letramento digital para as famílias à proteção estratégica para negócios. Conheça as nossas frentes de atuação.
+              </h2>
+            </div>
+            
+            <div className="grid lg:grid-cols-3 gap-8">
+              
+              {/* Cartão 1: Impacto Social */}
+              <div className="bg-white rounded-[2rem] p-8 lg:p-10 border-2 border-petrol/30 shadow-xl relative flex flex-col h-full transform lg:-translate-y-4">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <span className="bg-petrol text-white text-xs font-bold uppercase tracking-wider py-1.5 px-4 rounded-full">
+                    Impacto Social
+                  </span>
+                </div>
+                <div className="mb-8 mt-2">
+                  <h3 className="font-display text-2xl font-semibold text-dark mb-2">Crianças e Mulheres</h3>
+                  <p className="text-graphite/60 text-sm font-medium uppercase tracking-wider mb-6">Foco Comunitário</p>
+                  <p className="text-graphite font-light mb-6 min-h-[48px]">
+                    <span className="font-medium">Público:</span> Crianças, jovens e mulheres em situação de vulnerabilidade.
+                  </p>
+                  <div className="flex items-baseline gap-2 pb-8 border-b border-black/10">
+                    <span className="text-4xl font-display font-medium text-petrol">Acesso Gratuito</span>
+                    <span className="text-sm font-medium text-graphite/60 align-bottom">/ Preço Social</span>
+                  </div>
+                </div>
+                <div className="flex-1 space-y-4">
+                  <div className="flex gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-petrol shrink-0" />
+                    <span className="text-graphite/80 text-sm leading-relaxed">Acesso à Plataforma Educacional Gamificada (focada em letramento lúdico e prevenção de riscos).</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-petrol shrink-0" />
+                    <span className="text-graphite/80 text-sm leading-relaxed">Acesso à "Mary": nossa assistente virtual no WhatsApp que atua como rede de emergência e salvaguarda para mulheres.</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-petrol shrink-0" />
+                    <span className="text-graphite/80 text-sm leading-relaxed">Trilhas de conhecimento sobre combate à violência digital e desinformação.</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Cartão 2: MEIs */}
+              <div className="bg-white rounded-[2rem] p-8 lg:p-10 border border-black/5 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
+                <div className="mb-8">
+                  <h3 className="font-display text-2xl font-semibold text-dark mb-2">MEIs</h3>
+                  <p className="text-graphite/60 text-sm font-medium uppercase tracking-wider mb-6">Microempreendedores Individuais</p>
+                  <p className="text-graphite font-light mb-6 min-h-[48px]">
+                    <span className="font-medium">Público:</span> Empreendedores de base e comércio local.
+                  </p>
+                  <div className="flex items-baseline gap-2 pb-8 border-b border-black/10">
+                    <span className="text-lg font-medium text-graphite/60 align-top">R$</span>
+                    <span className="text-5xl font-display font-medium text-dark">49</span>
+                    <span className="text-sm font-medium text-graphite/60 align-bottom">/ mês</span>
+                  </div>
+                </div>
+                <div className="flex-1 space-y-4">
+                  <div className="flex gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-petrol shrink-0" />
+                    <span className="text-graphite/80 text-sm leading-relaxed">Blindagem prática de contas comerciais (segurança no WhatsApp Business e Instagram).</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-petrol shrink-0" />
+                    <span className="text-graphite/80 text-sm leading-relaxed">Treinamento rápido para prevenção de fraudes financeiras (golpes do PIX e boletos falsos).</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-petrol shrink-0" />
+                    <span className="text-graphite/80 text-sm leading-relaxed">Letramento sobre privacidade de dados dos clientes no dia a dia.</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-petrol shrink-0" />
+                    <span className="text-graphite/80 text-sm leading-relaxed">Guias práticos para recuperação de contas invadidas.</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Cartão 3: PMEs */}
+              <div className="bg-white rounded-[2rem] p-8 lg:p-10 border border-black/5 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
+                <div className="mb-8">
+                  <h3 className="font-display text-2xl font-semibold text-dark mb-2">PMEs</h3>
+                  <p className="text-graphite/60 text-sm font-medium uppercase tracking-wider mb-6">Pequenas e Médias Empresas</p>
+                  <p className="text-graphite font-light mb-6 min-h-[48px]">
+                    <span className="font-medium">Público:</span> Empresas em crescimento buscando governança técnica e institucional.
+                  </p>
+                  <div className="flex items-baseline gap-2 pb-8 border-b border-black/10">
+                    <span className="text-lg font-medium text-graphite/60 align-top">R$</span>
+                    <span className="text-5xl font-display font-medium text-dark">499</span>
+                    <span className="text-sm font-medium text-graphite/60 align-bottom">/ mês</span>
+                  </div>
+                </div>
+                <div className="flex-1 space-y-4">
+                  <div className="flex gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-petrol shrink-0" />
+                    <span className="text-graphite/80 text-sm leading-relaxed">Diagnóstico de vulnerabilidades na infraestrutura e governança de dados.</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-petrol shrink-0" />
+                    <span className="text-graphite/80 text-sm leading-relaxed">Treinamento corporativo de equipes contra ataques de phishing e engenharia social.</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-petrol shrink-0" />
+                    <span className="text-graphite/80 text-sm leading-relaxed">Consultoria inicial para adequação à LGPD e frameworks de segurança.</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-petrol shrink-0" />
+                    <span className="text-graphite/80 text-sm leading-relaxed">Estratégias de proteção cibernética e resiliência integradas com Inteligência Artificial.</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
         {/* Banner CTA */}
         <section className="py-32 bg-petrol text-white text-center relative overflow-hidden">
           <div className="max-w-4xl mx-auto px-6 relative z-10 flex flex-col items-center">
