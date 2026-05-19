@@ -144,11 +144,6 @@ export default function App() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-petrol/20 bg-petrol/5 text-petrol text-xs font-semibold uppercase tracking-wider mb-8">
-                  <span className="w-2 h-2 rounded-full bg-purple-subtle"></span>
-                  Educação Digital Transformadora
-                </div>
-                
                 <h1 className="text-5xl md:text-7xl font-display font-medium text-dark leading-[1.05] tracking-tight text-balance mb-8">
                   Proteção digital para <span className="text-petrol">quem mais precisa.</span>
                 </h1>
